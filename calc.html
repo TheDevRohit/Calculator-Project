@@ -1,0 +1,126 @@
+<html>
+  <head>
+   <title>Calculator</title>
+    <style>
+   body{
+    background:white;
+    animation:bgchange 10s infinite;   
+}
+
+.con{
+       width:290px;
+        background:rgba(0,0,0,0.8); 
+        margin:8% 40%;
+       }
+        .Display{
+         margin:25px; 
+       }
+     #Display{ 
+         height:50px; 
+          width:240px; 
+          font-size: 40px; 
+          margin-top:50px;
+          border-radius:0px;
+          text-align:right; 
+          box-shadow:none; 
+           border:hidden;
+        outline:none;      
+     background:rgba(0,0,0,0.0);  
+   }
+   .button{
+       margin-left:20px;
+       padding:12px;  
+       outline:0;  
+     }
+#but:hover{
+   background:rgb(255,255,255);
+   cursor:pointer;
+   color:black;
+}
+#but2:hover{
+   background:orange;
+   cursor:pointer;
+   color:#fff;
+}
+
+
+    input{
+    height:51px;
+    width:51px;
+    padding:10px;
+    margin:0px 3px;
+    border-radius:50%;
+    font-size:18px;
+    background:rgba(0,0,0,0.3); 
+    box-shadow:10px 10px 40px rgba(0 ,0 ,0,0.9); 
+    border:hidden; 
+    color:white;
+}
+@keyframes bgchange{
+  0%{
+   background:white;
+ }
+10%{
+   background:red;
+ }
+20%{
+   background:teal;
+}
+
+30%{
+   background:rgba(10,245,0,0.7);
+}
+
+40%{
+   background:rgba(100,100,100,0.7);
+}
+
+50%{
+   background:rgba(100,50,200,0.9);
+}
+}
+
+    </style> 
+   </head>
+ <body>
+<div class="Con">
+<div class="Display"> 
+<input type="text" id="Display" placeholder="0">
+</div>
+<div class="Button">
+<input type="button" value="%" onclick="Display.value += '%'" id="but">
+<input type="button" value="Ac"onclick="Display.value = '' " id="but">
+<input type="button" value="De" onclick="Display.value = Display.value.toString().slice(0,-1)" id="but">
+<input type="button" value="*"onclick="Display.value  += '*'" id="but2">
+</div>
+
+<div class="Button">
+<input type="button" value="7" onclick="Display.value += '7'" id="but">
+<input type="button" value="8" onclick="Display.value += '8'" id="but">
+<input type="button" value="9" onclick="Display.value += '9'"id="but">
+<input type="button" value="/" onclick="Display.value += '/'"id="but2">
+</div>
+
+<div class="Button">
+<input type="button" value="4" onclick="Display.value += '4'"id="but" >
+<input type="button" value="5" onclick="Display.value += '5'"id="but">
+<input type="button" value="6" onclick="Display.value += '6'"id="but">
+<input type="button" value="-" onclick="Display.value += '-'"id="but2">
+</div>
+
+<div class="Button">
+<input type="button" value="1" onclick="Display.value += '1'"id="but">
+<input type="button" value="2" onclick="Display.value += '2'"id="but">
+<input type="button" value="3" onclick="Display.value += '3'"id="but">
+<input type="button" value="+" onclick="Display.value += '+'"id="but2">
+</div>
+
+<div class="Button">
+<input type="button" value="+/-" onclick="Display.value += '+'"id="but">
+<input type="button" value="0" onclick="Display.value += '0'"id="but">
+<input type="button" value="." onclick="Display.value += '.'"id="but">
+<input type="button" value="=" onclick="Display.value = eval(Display.value)"id="but2">
+</div>
+</div>
+</body>
+</html>
